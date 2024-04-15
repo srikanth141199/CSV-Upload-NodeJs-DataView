@@ -7,6 +7,8 @@ import expressLayouts from "express-ejs-layouts";
 import router from "./routes/routes.js";
 import connectDB from "./config/mongoose.js";
 
+const port = process.env.PORT || 3200;
+
 const app = express();
 app.use(expressLayouts);//setting Layout
 
@@ -21,7 +23,7 @@ app.set('views', './views');
 app.use("/", router);
 
 connectDB().then(() => {
-    app.listen(3200, (err) => {
+    app.listen(port, (err) => {
         if (err) {
             console.log("Error Connecting to server!!");
             return;
