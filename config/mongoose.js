@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const connectDB = async () => {
     try {
-        await mongoose.connect('mongodb://127.0.0.1:27017/csvUploads');
+        await mongoose.connect('mongodb+srv://kolleparasrikanth:Srikanth5359$@ecomdb.ndaljpt.mongodb.net/csvUploads');
         console.log("Successfully connected to DB");
     } catch (error) {
         console.error("Error connecting to DB:", error);
