@@ -1,3 +1,4 @@
+import "./env.js"
 import express from "express";
 import path from "path";
 import multer from "multer";
@@ -7,7 +8,7 @@ import expressLayouts from "express-ejs-layouts";
 import router from "./routes/routes.js";
 import connectDB from "./config/mongoose.js";
 
-const port = process.env.PORT || 3200;
+const port = process.env.PORT || 3200 ;
 
 const app = express();
 app.use(expressLayouts);//setting Layout
